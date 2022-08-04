@@ -2,7 +2,7 @@ import style from 'components/App.module.css';
 import { Component } from 'react';
 import ContactForm from 'components/ContactForm/ContactForm';
 import Filter from 'components/Filter/Filter';
-import ContactList from 'components/ContactList/ContactList';
+// import ContactList from 'components/ContactList/ContactList';
 import ContactItem from 'components/ContactItem/ContactItem';
 
 class App extends Component {
@@ -57,10 +57,8 @@ class App extends Component {
         <ContactForm onSubmit={this.addContacts} />
         <h3 className={style.title}>Contacts</h3>
         <Filter filter={filter} onChange={this.changeFilter} />
-        <ContactList>
           <ContactItem contacts={visibleContact}
           onDeleteContact={this.deleteContact}/>
-        </ContactList>
       </div>
     );
   }
